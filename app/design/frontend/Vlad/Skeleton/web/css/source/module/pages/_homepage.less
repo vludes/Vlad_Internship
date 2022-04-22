@@ -11,6 +11,10 @@
            width: 50%;
        }
 
+        .pagebuilder-poster-content h1 {
+            font-size: 4.6rem;
+        }
+
         button.pagebuilder-banner-button {
             margin: @indent__m 0 0 0;
             padding: 0;
@@ -26,6 +30,20 @@
         .pagebuilder-column-group > div {
             width: 645px;
 
+        }
+
+        .categories-text-right {
+            .pagebuilder-banner-wrapper {
+                .pagebuilder-overlay {
+                    &.pagebuilder-poster-overlay {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+
+        .pagebuilder-poster-content h1 {
+            margin: 0;
         }
 
 
