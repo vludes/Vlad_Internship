@@ -61,6 +61,16 @@
         }
     }
 
+    .old-price {
+        .price {
+            font-size: @font-size__xs;
+        }
+    }
+
+    .special-price {
+        font-size: @font-size__l;
+    }
+
 
 
         //=========================================
@@ -191,6 +201,10 @@
             .price-box {
                 margin: @indent__s 0 @indent__m;
 
+                .special-price {
+                    font-size: @font-size__xl;
+                }
+
                 .price {
                     font-weight: @font-weight__bold;
                     white-space: nowrap;
@@ -203,10 +217,13 @@
             }
 
             .old-price {
-                margin: @indent__xs 0;
+                margin: 1px 0 0 @indent__xs;
+
 
                 .price {
                     font-weight: normal;
+                    font-size: @font-size__l;
+                    text-decoration: line-through;
                 }
             }
 
@@ -264,6 +281,7 @@
         .price {
             font-size: @font-size__xl;
         }
+
 
         .price-including-tax + .price-excluding-tax,
         .weee {

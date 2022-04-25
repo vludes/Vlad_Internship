@@ -7,9 +7,11 @@
         * {
             letter-spacing: 2px;
         }
+
+
         div.pagebuilder-poster-content {
-           width: 50%;
-       }
+            width: 50%;
+        }
 
         .pagebuilder-poster-content h1 {
             font-size: 4.6rem;
@@ -24,7 +26,7 @@
 
         .categories-row {
             height: 315px;
-            margin:@indent__m 0 @indent__m 0;
+            margin: @indent__m 0 @indent__base * 3 0;
         }
 
         .pagebuilder-column-group > div {
@@ -46,6 +48,7 @@
             h1 {
                 margin: 0;
             }
+
             a {
                 font-size: @font-size__l;
                 text-decoration: underline;
@@ -53,6 +56,24 @@
             }
         }
 
+        .our-products-text {
+            &::after {
+                content: "";
+                width: 30px;
+                height: 3px;
+                background: #222;
+                position: absolute;
+            }
 
+            h1 {
+                margin-bottom: 0;
+            }
+
+            h4 {
+                margin-top: 10px;
+            }
+
+
+        }
     }
 }
