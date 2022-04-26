@@ -22,7 +22,6 @@
         &.clearfix {
             display: none;
         }
-
     }
 
     .product-image-container {
@@ -34,15 +33,49 @@
         }
     }
 
+    .our-products-row {
+        .product-item {
+            text-align: center;
+        }
+    }
+
+    [data-content-type='row'] {
+        li.product-item {
+            text-align: center;
+        }
+    }
 
     .three-columns-wrapper {
-        ol.widget-product-grid {
-             .lib-vendor-prefix-flex-direction(column)
+        [data-content-type='products'] {
+            .block.widget {
+                .products-grid {
+                    .widget-product-grid.product-items {
+                        .product-item {
+                            margin-bottom: @indent__l;
+                            .price-box.price-final_price {
+                                justify-content: flex-start;
+                            }
+                            &-info {
+                                .lib-vendor-prefix-display(flex);
+                                .lib-vendor-prefix-flex-direction(row);
+                            }
+                            &-inner {
+                                display: none;
+                            }
+                            width: 100%;
+                            text-align: left;
+                            margin-left: 0;
+                            &-details {
+                                margin-left: @indent__m;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        .product-item-info {
-            .lib-vendor-prefix-display(flex);
-            .lib-vendor-prefix-flex-direction(row);
+        ol.widget-product-grid {
+             .lib-vendor-prefix-flex-direction(column)
         }
 
         .product-image-container {
@@ -61,8 +94,6 @@
         }
     }
 
-
-
     //=========================================
 
     div.product {
@@ -72,7 +103,7 @@
             }
         }
     }
-    //product-items widget-product-grid
+
     .product {
 
         &-items {
@@ -99,8 +130,6 @@
             &-details {
                 .lib-vendor-prefix-display(flex);
                 .lib-vendor-prefix-flex-direction(column);
-                align-items: center;
-                text-align: center;
             }
 
             .products-grid & {
