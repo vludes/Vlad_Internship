@@ -4,8 +4,11 @@
 
 & when (@media-common = true) {
     .cms-home {
-        * {
-            letter-spacing: 2px;
+
+        .banner-row {
+            .pagebuilder-poster-content {
+                width: 55%;
+            }
         }
 
         div.section-item-content {
@@ -19,7 +22,7 @@
         }
 
         .pagebuilder-poster-content h1 {
-            .lib-font-size(46);
+            .lib-font-size(36);
         }
 
         button.pagebuilder-banner-button {
@@ -111,7 +114,13 @@
         }
 
         .three-columns-unit {
-            padding: 0 @indent__base;
+            &:first-child {
+                padding: 0 @indent__base 0 0;
+            }
+            &:last-child {
+                padding: 0 0 0 @indent__base;
+            }
+
         }
     }
 
@@ -122,18 +131,18 @@
                 display: block;
                 width: 550px;
                 position: absolute;
-                top: 87.3%;
+                top: 87.55%;
                 border-top: 1px solid #ebebeb;
-                right: 55%;
+                right: 57%;
             }
             &::after {
                 content: "";
                 display: block;
                 width: 550px;
                 position: absolute;
-                top: 87.3%;
+                top: 87.55%;
                 border-top: 1px solid #ebebeb;
-                left: 55%;
+                left: 57%;
             }
         }
         .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
