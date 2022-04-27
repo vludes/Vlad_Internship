@@ -114,4 +114,31 @@
             padding: 0 @indent__base;
         }
     }
-}
+
+    .shop-by-brands-row {
+        .heading-shop-by-brands {
+            &::before {
+                content: "";
+                display: block;
+                width: 550px;
+                position: absolute;
+                top: 87.3%;
+                border-top: 1px solid #ebebeb;
+                right: 55%;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 550px;
+                position: absolute;
+                top: 87.3%;
+                border-top: 1px solid #ebebeb;
+                left: 55%;
+            }
+        }
+        .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
+                width: 20% !important; //sorry couldn't give it more priority
+                align-items: center;
+            }
+        }
+    }
