@@ -120,6 +120,9 @@
         }
 
         &-item {
+            &-inner {
+                display: none;
+            }
 
             min-width: 300px;
 
@@ -414,16 +417,9 @@
         .products-grid & {
             &:hover,
             &.active {
-                .lib-css(background, @product-item__hover__background-color);
-                .lib-css(box-shadow, @product-item__hover__box-shadow);
-                border: 1px solid @color-gray-light2;
-                margin: -10px;
-                padding: 9px;
-                position: relative;
-                z-index: 9;
 
                 .product-item-inner {
-                    display: block;
+                    display: none;
                 }
                 .sidebar & {
                     .product-item-photo {

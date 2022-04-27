@@ -1,11 +1,113 @@
-//
-//  Common
-//  _____________________________________________
 
-& when (@media-common = true) {
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .cms-home {
+        .banner-row {
+            .pagebuilder-overlay.pagebuilder-poster-overlay {
+                height: 90vh;
+            }
+
+        }
+        .pagebuilder-poster-content h1 {
+            .lib-font-size(26);
+        }
+
+        .categories-row {
+            height: 100%;
+            margin-bottom: @indent__l !important; //overrode pb styles
+            .pagebuilder-column {
+                &:first-of-type {
+                    margin-bottom: @indent__l;
+                }
+                [data-content-type="banner"]{
+                    margin: 0 !important; //overrode pb styles
+                }
+            }
+            .pagebuilder-banner-wrapper{
+                .pagebuilder-overlay.pagebuilder-poster-overlay {
+                    justify-content: flex-end;
+                }
+            }
+            .pagebuilder-poster-content {
+                text-align: right;
+                width: 50%;
+                background-color: @color-Skeleton-creme;
+                opacity: 0.9;
+                a {
+                    color: @color-Skeleton-black;
+                    text-decoration: underline;
+                    .lib-font-size(16);
+                }
+            }
+        }
+        .our-products-text {
+            text-align: center;
+            &::after {
+                content: "";
+                width: 30px;
+                height: 3px;
+                background: @color-Skeleton-black;
+                position: absolute;
+                right: 47%;
+            }
+            h1 {
+                margin-bottom: 0;
+            }
+            h4 {
+                margin-top: @indent__s;
+            }
+        }
+        .november-sale-row {
+            a {
+                color: @color-Skeleton-black;
+                text-decoration: underline;
+                .lib-font-size(16);
+            }
+            .pagebuilder-column-group {
+                flex-wrap: nowrap;
+            }
+        }
+        .november_sale-title {
+            width: 200px;
+            margin-left: @indent__xl !important; //overrode pb styles
+            text-align: left;
+        }
+        .november_sale-link {
+            margin-right: @indent__xl !important;
+            text-align: right;
+        }
+
+        .three-columns-wrapper {
+            padding: 0 @indent__l;
+            h3 {
+                padding-bottom: 20px;
+                border-bottom: 1px solid @color-Skeleton-grey5;
+                margin-bottom: 40px;
+            }
+        }
+
+        .shop-by-brands-row {
+            padding: 0 @indent__l;
+            .heading-shop-by-brands {
+                border-bottom: 1px solid @color-Skeleton-grey5;
+                padding-bottom: @indent__l;
+            }
+            .pagebuilder-column-group {
+                flex-wrap: nowrap;
+                padding: 0 @indent__xs * 3;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
     .cms-home {
 
         .banner-row {
+            .pagebuilder-overlay.pagebuilder-poster-overlay {
+                height: 850px;
+            }
             .pagebuilder-poster-content {
                 width: 55%;
             }
@@ -80,8 +182,6 @@
             h4 {
                 margin-top: @indent__s;
             }
-
-
         }
 
         .november_sale {
@@ -151,3 +251,9 @@
             }
         }
     }
+
+
+
+
+
+
