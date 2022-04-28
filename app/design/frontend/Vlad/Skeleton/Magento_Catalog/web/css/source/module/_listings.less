@@ -18,6 +18,24 @@
 
     //CUSTOM
 
+
+    page-products,
+    .page-layout-1column,
+    .page-layout-3columns,
+    .page-products.page-layout-1column,
+    .page-products.page-layout-3columns {
+        .products-grid {
+            .product-item {
+                margin-left: 0;
+                width: calc(~'(100% - 4%) / 3');
+
+                &:nth-child(3n + 1) {
+                    margin-left: 2%;
+                }
+            }
+        }
+    }
+
     div.swatch-attribute-options {
         &.clearfix {
             display: none;
@@ -513,18 +531,17 @@
         }
     }
 
-    .page-products,
-    .page-layout-1column,
-    .page-layout-3columns,
-    .page-products.page-layout-1column,
-    .page-products.page-layout-3columns {
-        .products-grid {
-            .product-item {
-                margin-left: 0;
-                width: calc(~'(100% - 4%) / 3');
 
-                &:nth-child(3n + 1) {
+    .page-layout-1column {
+        .our-products-row {
+            .products-grid {
+                .product-item {
                     margin-left: 0;
+                    width: calc(~'(100% - 4%) / 3');
+
+                    &:nth-child(3n + 1) {
+                        margin-left: 2%;
+                    }
                 }
             }
         }
@@ -539,10 +556,10 @@
         }
     }
 }
-
-//
+    //
 //  Desktop
 //  _____________________________________________
+
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .page-products {
@@ -573,6 +590,13 @@
             }
         }
     }
+    .our-products-row {
+        .products-grid {
+            .product-items {
+                margin: 0 @indent__xl * 2.5;
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -587,6 +611,23 @@
         .products-grid {
             .product-item {
                 width: 100%/6;
+            }
+        }
+    }
+
+    .our-products-row {
+        [data-content-type="products"] {
+            margin-top: 0 !important; //overrode pb styles
+        }
+        .products-grid {
+            .product-items {
+                .lib-vendor-prefix-display(flex);
+                justify-content: space-between;
+                .product-item {
+                    min-width: 100px;
+                    margin-left: 2%;
+                    width: calc((100% - 8%) / 4) !important; //sorry have no clue how to override this
+                }
             }
         }
     }

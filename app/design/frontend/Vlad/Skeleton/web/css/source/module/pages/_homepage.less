@@ -1,5 +1,3 @@
-
-
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .cms-home {
         .banner-row {
@@ -8,6 +6,7 @@
             }
 
         }
+
         .pagebuilder-poster-content h1 {
             .lib-font-size(26);
         }
@@ -19,20 +18,24 @@
                 &:first-of-type {
                     margin-bottom: @indent__l;
                 }
-                [data-content-type="banner"]{
+
+                [data-content-type="banner"] {
                     margin: 0 !important; //overrode pb styles
                 }
             }
-            .pagebuilder-banner-wrapper{
+
+            .pagebuilder-banner-wrapper {
                 .pagebuilder-overlay.pagebuilder-poster-overlay {
                     justify-content: flex-end;
                 }
             }
+
             .pagebuilder-poster-content {
                 text-align: right;
                 width: 50%;
                 background-color: @color-Skeleton-creme;
                 opacity: 0.9;
+
                 a {
                     color: @color-Skeleton-black;
                     text-decoration: underline;
@@ -40,109 +43,226 @@
                 }
             }
         }
+
         .our-products-text {
             text-align: center;
-            &::after {
-                content: "";
-                width: 30px;
-                height: 3px;
-                background: @color-Skeleton-black;
-                position: absolute;
-                right: 47%;
-            }
+
             h1 {
                 margin-bottom: 0;
             }
+
             h4 {
                 margin-top: @indent__s;
             }
         }
-        .november-sale-row {
-            a {
-                color: @color-Skeleton-black;
-                text-decoration: underline;
-                .lib-font-size(16);
-            }
-            .pagebuilder-column-group {
-                flex-wrap: nowrap;
-            }
-        }
-        .november_sale-title {
-            width: 200px;
-            margin-left: @indent__xl !important; //overrode pb styles
-            text-align: left;
-        }
-        .november_sale-link {
-            margin-right: @indent__xl !important;
-            text-align: right;
-        }
 
-        .three-columns-wrapper {
-            padding: 0 @indent__l;
-            h3 {
-                padding-bottom: 20px;
-                border-bottom: 1px solid @color-Skeleton-grey5;
-                margin-bottom: 40px;
+        .divider-our-products {
+            hr {
+                border-color: @color-Skeleton-black !important; //overrode pb styles
+                display: block !important; //overrode pb styles
             }
-        }
 
-        .shop-by-brands-row {
-            padding: 0 @indent__l;
-            .heading-shop-by-brands {
-                border-bottom: 1px solid @color-Skeleton-grey5;
-                padding-bottom: @indent__l;
+            .november-sale-row {
+                a {
+                    color: @color-Skeleton-black;
+                    text-decoration: underline;
+                    .lib-font-size(16);
+                }
+
+                .pagebuilder-column-group {
+                    flex-wrap: nowrap;
+                }
             }
-            .pagebuilder-column-group {
-                flex-wrap: nowrap;
-                padding: 0 @indent__xs * 3;
-                text-align: center;
+
+            .november_sale-title {
+                width: 200px;
+                margin-left: @indent__xl !important; //overrode pb styles
+                text-align: left;
+            }
+
+            .november_sale-link {
+                margin-right: @indent__xl !important;
+                text-align: right;
+            }
+
+            .three-columns-wrapper {
+                padding: 0 @indent__l;
+
+                h3 {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid @color-Skeleton-grey5;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .shop-by-brands-row {
+                padding: 0 @indent__l;
+
+                .heading-shop-by-brands {
+                    border-bottom: 1px solid @color-Skeleton-grey5;
+                    padding-bottom: @indent__l;
+                }
+
+                .pagebuilder-column-group {
+                    flex-wrap: nowrap;
+                    padding: 0 @indent__xs * 3;
+                    text-align: center;
+                }
             }
         }
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
-    .cms-home {
 
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .cms-home {
+        .banner-row {
+            .pagebuilder-banner-wrapper {
+                background-position: initial !important; //overrode pb styles
+                a {
+                    color: @color-Skeleton-black;
+                    text-decoration: underline;
+                    .lib-font-size(16);
+                }
+
+                .pagebuilder-poster-content {
+                    [data-element="content"] {
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+
+        .categories-row {
+            height: 100%;
+            margin-bottom: @indent__l !important; //overrode pb styles
+            .pagebuilder-column {
+                &:first-of-type {
+                    margin-bottom: @indent__l;
+                }
+
+                [data-content-type="banner"] {
+                    margin: 0 !important; //overrode pb styles
+                }
+            }
+
+            .pagebuilder-banner-wrapper {
+                height: 350px;
+
+                .pagebuilder-overlay.pagebuilder-poster-overlay {
+                    justify-content: flex-end;
+                }
+            }
+
+            .pagebuilder-poster-content {
+                margin-top: @indent__base;
+                text-align: right;
+                width: 50%;
+                background-color: @color-Skeleton-creme;
+                opacity: 0.9;
+
+                a {
+                    color: @color-Skeleton-black;
+                    text-decoration: underline;
+                    .lib-font-size(16);
+                }
+            }
+        }
+
+        .our-products-text {
+            text-align: center;
+
+            h1 {
+                margin-bottom: 0;
+            }
+
+            h4 {
+                margin-top: @indent__s;
+            }
+        }
+
+        .divider-our-products {
+            hr {
+                border-color: @color-Skeleton-black !important; //overrode pb styles
+                display: block !important; //overrode pb styles
+            }
+
+            .november-sale-row {
+                a {
+                    color: @color-Skeleton-black;
+                    text-decoration: underline;
+                    .lib-font-size(16);
+                }
+
+                .pagebuilder-column-group {
+                    flex-wrap: nowrap;
+                }
+            }
+
+            .three-columns-wrapper {
+                padding: 0 @indent__l;
+
+                h3 {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid @color-Skeleton-grey5;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .shop-by-brands-row {
+                padding: 0 @indent__l;
+                margin-top: 30px !important; //overrode pb styles
+                .heading-shop-by-brands {
+                    border-bottom: 1px solid @color-Skeleton-grey5;
+                    padding-bottom: @indent__l;
+                }
+
+                .pagebuilder-column-group {
+                    flex-wrap: nowrap;
+                    padding: 0 @indent__xs * 3;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .cms-home {
         .banner-row {
             .pagebuilder-overlay.pagebuilder-poster-overlay {
                 height: 850px;
+                margin-left: @indent__xl !important; //overrode pb styles
+                h1 {
+                    .lib-font-size(36);
+                }
+
+                p {
+                    max-width: 400px;
+                }
+
             }
-            .pagebuilder-poster-content {
-                width: 55%;
-            }
-        }
-
-        div.section-item-content {
-            &.nav-sections-item-content {
-                display: none;
-            }
-        }
-
-        div.pagebuilder-poster-content {
-            width: 50%;
-        }
-
-        .pagebuilder-poster-content h1 {
-            .lib-font-size(36);
-        }
-
-        button.pagebuilder-banner-button {
-            margin: @indent__m 0 0 0;
-            padding: 0;
-            text-decoration: underline;
-            color: black;
         }
 
         .categories-row {
             height: 315px;
             margin: @indent__m 0 @indent__base * 3 0;
+
+            .pagebuilder-poster-content {
+                margin-top: @indent__base;
+                text-align: right;
+                width: 50%;
+                background-color: @color-Skeleton-creme;
+                opacity: 0.9;
+
+                a {
+                    color: @color-Skeleton-black;
+                    text-decoration: underline;
+                    .lib-font-size(16);
+                }
+            }
         }
 
-        .pagebuilder-column-group > div {
-            width: 645px;
-
-        }
 
         .categories-text-right {
             .pagebuilder-banner-wrapper {
@@ -167,13 +287,8 @@
         }
 
         .our-products-text {
-            &::after {
-                content: "";
-                width: 30px;
-                height: 3px;
-                background: @color-Skeleton-black;
-                position: absolute;
-            }
+            text-align: center;
+
 
             h1 {
                 margin-bottom: 0;
@@ -184,73 +299,105 @@
             }
         }
 
-        .november_sale {
-            &-link {
-                a {
-                    text-decoration: underline;
-                    color: @color-Skeleton-black;
-                    .lib-font-size(18);
+        .divider-our-products {
+            hr {
+                border-color: @color-Skeleton-black !important; //overrode pb styles
+                display: block !important; //overrode pb styles
+            }
+
+            .november_sale {
+                &-link {
+                    a {
+                        text-decoration: underline;
+                        color: @color-Skeleton-black;
+                        .lib-font-size(18);
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+
+                }
+
+                &-title {
+                    > h2 {
+                        margin-top: @indent__s;
+                    }
+                }
+
+            }
+
+            .three-columns-wrapper {
+                padding: 0 @indent__m;
+
+                h3 {
+                    padding-bottom: @indent__base;
+                    border-bottom: 1px solid @color-Skeleton-grey4;
+                    margin-bottom: @indent__xl;
+                }
+            }
+
+            .three-columns-unit {
+                &:first-child {
+                    padding: 0 @indent__base 0 0;
+                }
+
+                &:last-child {
+                    padding: 0 0 0 @indent__base;
+                }
+
+            }
+
+            .shop-by-brands-row {
+                .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
+                    width: 20% !important; //sorry couldn't give it more priority
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .cms-home {
+        .banner-row {
+            .pagebuilder-overlay.pagebuilder-poster-overlay {
+                height: 850px;
+                margin-left: 0;
+                .pagebuilder-poster-content {
+                width: 75%;
+                }
+
+                }
+                h1 {
+                    .lib-font-size(36);
                 }
 
                 p {
-                    margin-bottom: 0;
+                    max-width: 400px;
                 }
 
             }
+        .our-products-text {
+            text-align: left;
 
-            &-title {
-                > h2 {
-                    margin-top: @indent__s;
-                }
+            h1 {
+                margin-bottom: 0;
             }
-
-        }
-        .three-columns-wrapper  {
-            h3 {
-                padding-bottom: @indent__base;
-                border-bottom: 1px solid @color-Skeleton-grey4;
-                margin-bottom: @indent__xl;
-            }
-        }
-
-        .three-columns-unit {
-            &:first-child {
-                padding: 0 @indent__base 0 0;
-            }
-            &:last-child {
-                padding: 0 0 0 @indent__base;
+            h4 {
+                margin-top: @indent__s;
+                margin-bottom: 0;
             }
 
         }
-    }
-
-    .shop-by-brands-row {
-        .heading-shop-by-brands {
-            &::before {
-                content: "";
-                display: block;
-                width: 550px;
-                position: absolute;
-                top: 87.55%;
-                border-top: 1px solid #ebebeb;
-                right: 57%;
-            }
-            &::after {
-                content: "";
-                display: block;
-                width: 550px;
-                position: absolute;
-                top: 87.55%;
-                border-top: 1px solid #ebebeb;
-                left: 57%;
-            }
-        }
-        .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
-                width: 20% !important; //sorry couldn't give it more priority
-                align-items: center;
+        .divider-our-products {
+            hr {
+                border-color: @color-Skeleton-black !important; //overrode pb styles
+                display: inline-block !important; //overrode pb styles
             }
         }
     }
+}
 
 
 
