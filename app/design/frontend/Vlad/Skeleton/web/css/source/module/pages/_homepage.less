@@ -61,55 +61,106 @@
                 border-color: @color-Skeleton-black !important; //overrode pb styles
                 display: block !important; //overrode pb styles
             }
-
-            .november-sale-row {
-                a {
-                    color: @color-Skeleton-black;
-                    text-decoration: underline;
-                    .lib-font-size(16);
-                }
-
-                .pagebuilder-column-group {
-                    flex-wrap: nowrap;
-                }
-            }
-
-            .november_sale-title {
-                width: 200px;
-                margin-left: @indent__xl !important; //overrode pb styles
-                text-align: left;
-            }
-
-            .november_sale-link {
-                margin-right: @indent__xl !important;
-                text-align: right;
-            }
-
-            .three-columns-wrapper {
-                padding: 0 @indent__l;
-
-                h3 {
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid @color-Skeleton-grey5;
-                    margin-bottom: 40px;
-                }
-            }
-
-            .shop-by-brands-row {
-                padding: 0 @indent__l;
-
-                .heading-shop-by-brands {
-                    border-bottom: 1px solid @color-Skeleton-grey5;
-                    padding-bottom: @indent__l;
-                }
-
-                .pagebuilder-column-group {
-                    flex-wrap: nowrap;
-                    padding: 0 @indent__xs * 3;
-                    text-align: center;
-                }
-            }
         }
+
+            //.november-sale-row {
+            //    .pagebuilder-column-group {
+            //        display: flex;
+            //        flex-direction: column;
+            //        .pagebuilder-column {
+            //            width: 100% !important; //overrode pb styles
+            //            align-items: center;
+            //            .november_sale-title {
+            //                margin: 0 !important; //overrode pb styles
+            //                text-align: center !important; //overrode pb styles
+            //                h2 {
+            //                    margin: 0 !important; //overrode pb styles
+            //                    text-align: center !important; //overrode pb styles
+            //                }
+            //                p {
+            //                    margin: 0 !important; //overrode pb styles
+            //                    text-align: center !important; //overrode pb styles
+            //                }
+            //            }
+            //            .november_sale-link {
+            //                text-align: center !important; // overrode pb styles
+            //                margin: 0 !important; //overrode pb styles
+            //                a {
+            //                    text-align: center !important; // overrode pb styles
+            //                    margin: 0 !important; //overrode pb styles
+            //                    color: @color-Skeleton-black;
+            //                    text-decoration: underline;
+            //                    .lib-font-size(16);
+            //                }
+            //            }
+            //        }
+            //    }
+            //    .november_sale-title {
+            //        margin: 0 !important; //overrode pb styles
+            //        text-align: center !important; //overrode pb styles
+            //        h2 {
+            //            margin: 0 !important; //overrode pb styles
+            //            text-align: center !important; //overrode pb styles
+            //        }
+            //        p {
+            //            margin: 0 !important; //overrode pb styles
+            //            text-align: center !important; //overrode pb styles
+            //        }
+            //    }
+            //    .november_sale-link {
+            //        text-align: center !important; // overrode pb styles
+            //        margin: 0 !important; //overrode pb styles
+            //        a {
+            //            text-align: center !important; // overrode pb styles
+            //            margin: 0 !important; //overrode pb styles
+            //            color: @color-Skeleton-black;
+            //            text-decoration: underline;
+            //            .lib-font-size(16);
+            //        }
+            //    }
+
+
+            //    .pagebuilder-column-group {
+            //        flex-wrap: nowrap;
+            //    }
+            //}
+
+            //.november_sale-title {
+            //    width: 200px;
+            //    margin-left: @indent__xl !important; //overrode pb styles
+            //    text-align: left;
+            //}
+            //
+            //.november_sale-link {
+            //    margin-right: @indent__xl !important;
+            //    text-align: right;
+            //}
+
+            //.three-columns-wrapper {
+            //    padding: 0 @indent__l;
+            //
+            //    h3 {
+            //        padding-bottom: 20px;
+            //        border-bottom: 1px solid @color-Skeleton-grey5;
+            //        margin-bottom: 40px;
+            //    }
+            //}
+            //
+            //.shop-by-brands-row {
+            //    padding: 0 @indent__l;
+            //    .heading-shop-by-brands {
+            //        border-bottom: 1px solid @color-Skeleton-grey5;
+            //        padding-bottom: @indent__l;
+            //    }
+            //    .pagebuilder-column-group {
+            //        flex-wrap: nowrap;
+            //        padding: 0 @indent__xs * 3;
+            //        text-align: center;
+            //
+            //
+            //    }
+            //}
+
     }
 }
 
@@ -186,44 +237,131 @@
                 border-color: @color-Skeleton-black !important; //overrode pb styles
                 display: block !important; //overrode pb styles
             }
+        }
+
+            //.november-sale-row {
+            //    a {
+            //        color: @color-Skeleton-black;
+            //        text-decoration: underline;
+            //        .lib-font-size(16);
+            //    }
+            //
+            //    .pagebuilder-column-group {
+            //        flex-wrap: nowrap;
+            //    }
+            //}
 
             .november-sale-row {
-                a {
-                    color: @color-Skeleton-black;
-                    text-decoration: underline;
-                    .lib-font-size(16);
-                }
-
                 .pagebuilder-column-group {
-                    flex-wrap: nowrap;
+                    display: flex;
+                    flex-direction: column;
+
+                    .pagebuilder-column {
+                        width: 100% !important; //overrode pb styles
+                        align-items: center;
+
+                        .november_sale-title {
+                            margin: 0 !important; //overrode pb styles
+                            text-align: center !important; //overrode pb styles
+                            h2 {
+                                margin: 0 !important; //overrode pb styles
+                                text-align: center !important; //overrode pb styles
+                            }
+
+                            p {
+                                margin: 0 !important; //overrode pb styles
+                                text-align: center !important; //overrode pb styles
+                            }
+                        }
+
+                        .november_sale-link {
+                            text-align: center !important; // overrode pb styles
+                            margin: 0 !important; //overrode pb styles
+                            a {
+                                text-align: center !important; // overrode pb styles
+                                margin: 0 !important; //overrode pb styles
+                                color: @color-Skeleton-black;
+                                text-decoration: underline;
+                                .lib-font-size(16);
+                            }
+                        }
+                    }
+                }
+
+                .november_sale-title {
+                    margin: 0 !important; //overrode pb styles
+                    text-align: center !important; //overrode pb styles
+                    h2 {
+                        margin: 0 !important; //overrode pb styles
+                        text-align: center !important; //overrode pb styles
+                    }
+
+                    p {
+                        margin: 0 !important; //overrode pb styles
+                        text-align: center !important; //overrode pb styles
+                    }
+                }
+
+                .november_sale-link {
+                    text-align: center !important; // overrode pb styles
+                    margin: 0 !important; //overrode pb styles
+                    a {
+                        text-align: center !important; // overrode pb styles
+                        margin: 0 !important; //overrode pb styles
+                        color: @color-Skeleton-black;
+                        text-decoration: underline;
+                        .lib-font-size(16);
+                    }
                 }
             }
 
-            .three-columns-wrapper {
-                padding: 0 @indent__l;
+            //.three-columns-wrapper {
+            //    padding: 0 @indent__l;
+            //
+            //    h3 {
+            //        padding-bottom: 20px;
+            //        border-bottom: 1px solid @color-Skeleton-grey5;
+            //        margin-bottom: 40px;
+            //    }
+            //}
+            //
+            //.shop-by-brands-row {
+            //    padding: 0 @indent__l;
+            //    margin-top: 30px !important; //overrode pb styles
+            //    .heading-shop-by-brands {
+            //        border-bottom: 1px solid @color-Skeleton-grey5;
+            //        padding-bottom: @indent__l;
+            //    }
+            //    .pagebuilder-column-group {
+            //        flex-wrap: nowrap;
+            //        padding: 0 @indent__xs * 3;
+            //        text-align: center;
+            //    }
+            //}
+                .three-columns-wrapper {
+                    padding: 0 @indent__l;
 
-                h3 {
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid @color-Skeleton-grey5;
-                    margin-bottom: 40px;
-                }
-            }
-
-            .shop-by-brands-row {
-                padding: 0 @indent__l;
-                margin-top: 30px !important; //overrode pb styles
-                .heading-shop-by-brands {
-                    border-bottom: 1px solid @color-Skeleton-grey5;
-                    padding-bottom: @indent__l;
+                    h3 {
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid @color-Skeleton-grey5;
+                        margin-bottom: 40px;
+                    }
                 }
 
-                .pagebuilder-column-group {
-                    flex-wrap: nowrap;
-                    padding: 0 @indent__xs * 3;
-                    text-align: center;
+                .shop-by-brands-row {
+                    padding: 0 @indent__l;
+                    .heading-shop-by-brands {
+                        border-bottom: 1px solid @color-Skeleton-grey5;
+                        padding-bottom: @indent__l;
+                    }
+                    .pagebuilder-column-group {
+                        flex-wrap: nowrap;
+                        padding: 0 @indent__xs * 3;
+                        text-align: center;
+
+
+                    }
                 }
-            }
-        }
     }
 }
 
@@ -304,6 +442,7 @@
                 border-color: @color-Skeleton-black !important; //overrode pb styles
                 display: block !important; //overrode pb styles
             }
+        }
 
             .november_sale {
                 &-link {
@@ -352,6 +491,33 @@
                 .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
                     width: 20% !important; //sorry couldn't give it more priority
                     align-items: center;
+                    flex-wrap: nowrap !important; // same problem, found _mobile.less, _default.less files but see no point in overriding
+                }
+            }
+        }
+    }
+@media only screen and (min-width: @screen__m) and (max-width: (@screen__l - 1)) {
+    .three-columns-wrapper {
+        .pagebuilder-column-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .three-columns-unit {
+                width: 100% !important; // overrode pb styles
+                &:last-of-type {
+                    padding: 0;
+                }
+                [data-content-type="text"] {
+                    text-align: center !important; //overrode pb styles
+                }
+                [data-content-type="products"] {
+                    width: 100%;
+                    .product-items.widget-product-grid {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                    }
                 }
             }
         }
