@@ -428,6 +428,20 @@
             display: block;
         }
     }
+
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .our-products-row {
+        .product-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
