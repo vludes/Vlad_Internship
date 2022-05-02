@@ -1,0 +1,42 @@
+//
+//  Common
+//  ---------------------------------------------
+
+& when (@media-common = true) {
+    .cms-home {
+        .blogs-container {
+            .post-header {
+                .post-title {
+                     a {
+                        color: @color-Skeleton-black;
+                    }
+                }
+                .post-posed-date {
+                    .value {
+                        color: @color-Skeleton-grey3;
+                        .lib-icon-image(
+                            @_icon-image: '@{baseDir}images/icons/calendar-icon.png',
+                            @_icon-image-height: 17px,
+                            @_icon-image-width: 17px,
+                            @_icon-image-margin: 10px,
+                            @_icon-image-position: before
+                        );
+
+                        &:before {
+                            background-size: 100%;
+
+                        }
+                    }
+                }
+                .post-text-hld.clearfix {
+                    [data-content-type="text"] {
+                        p {
+                            color: @color-Skeleton-grey3;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
