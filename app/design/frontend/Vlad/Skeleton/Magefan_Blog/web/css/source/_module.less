@@ -5,13 +5,42 @@
 & when (@media-common = true) {
     .cms-home {
         .blogs-container {
-            .post-header {
-                .post-title {
-                     a {
-                        color: @color-Skeleton-black;
+            padding: 0 @indent__m @indent__m @indent__m;
+
+            .post {
+                &-list {
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-prefix-flex-direction(row);
+                    .lib-vendor-box-align (center);
+                    justify-content: space-around;
+
+                    .post-header {
+                        .post-title-holder.clearfix {
+                            .post-title {
+                                > a.post-item-link {
+                                    color: @color-Skeleton-black;
+                                    .lib-font-size(16)
+                                }
+                            }
+                        }
                     }
                 }
-                .post-posed-date {
+
+                &-holder {
+                    padding: 0 @indent__s;
+                    margin: 0;
+
+                    &:nth-child(1) {
+                        padding: 0 @indent__s 0 0;
+                    }
+
+                    &:nth-child(3) {
+                        padding: 0 0 0 @indent__s;
+                    }
+                }
+
+
+                &-posed-date {
                     .value {
                         color: @color-Skeleton-grey3;
                         .lib-icon-image(
@@ -24,11 +53,11 @@
 
                         &:before {
                             background-size: 100%;
-
                         }
                     }
                 }
-                .post-text-hld.clearfix {
+
+                &-text-hld.clearfix {
                     [data-content-type="text"] {
                         p {
                             color: @color-Skeleton-grey3;
@@ -36,7 +65,12 @@
                     }
                 }
             }
-
         }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .blog-row {
+        padding: 0 @indent__m;
     }
 }
