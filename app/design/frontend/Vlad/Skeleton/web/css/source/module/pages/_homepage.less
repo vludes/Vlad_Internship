@@ -296,7 +296,6 @@
                     margin-top: @indent__s;
                 }
             }
-
         }
 
         .three-columns-wrapper {
@@ -321,6 +320,8 @@
         }
 
         .three-columns-wrapper {
+            padding: 0;
+
             .pagebuilder-column-group {
                 .lib-vendor-prefix-display(flex);
                 .lib-vendor-prefix-flex-direction(column);
@@ -349,29 +350,13 @@
                 }
             }
         }
-    }
 
-
-    .custom-blog-title {
-        padding-left: @indent__m;
-    }
-
-    .custom-blog-title-divider {
-        display: inline-block !important; //overrode pb styles
-        width: 30px;
-        padding-left: @indent__m;
-
-        hr {
-            border-width: 3px !important; //overrode pb styles
-            border-color: @color-Skeleton-black !important; //overrode pb styles
-        }
-    }
-
-    .shop-by-brands-row {
-        .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
-            width: 20% !important; //sorry couldn't give it more priority
-            align-items: center;
-            flex-wrap: nowrap !important; // same problem, found _mobile.less, _default.less files but see no point in overriding
+        .shop-by-brands-row {
+            .pagebuilder-column-group > [data-content-type="column"].pagebuilder-column {
+                width: 20% !important; //sorry couldn't give it more priority
+                align-items: center;
+                flex-wrap: nowrap !important; // same problem, found _mobile.less, _default.less files but see no point in overriding
+            }
         }
     }
 }
@@ -444,15 +429,37 @@
         .november-sale-row {
             [data-content-type="column-group"].pagebuilder-column-group {
                 .lib-vendor-prefix-flex-direction(row);
-                .november_sale-title {
-                    h2, p {
-                        text-align: left;
+            }
+        }
+
+        .three-columns-wrapper {
+            .pagebuilder-column-group {
+                .lib-vendor-prefix-flex-direction(row);
+
+                .pagebuilder-column {
+                    padding-right: 20px;
+
+                    [data-content-type="text"] {
+                        text-align: left !important; // overrode pb styles
+                    }
+
+                    .block.widget.block-products-list.grid {
+                        .block-content {
+                            .products-grid.grid {
+                                ol.product-items.widget-product-grid {
+                                    .lib-vendor-prefix-flex-direction(column);
+                                    justify-content: space-around;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
+
+
 
 
 
