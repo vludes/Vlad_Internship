@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.bottom.container">
+            <container name="page.bottom" label="Before Page Footer" htmlTag="div" htmlClass="content"/>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-links-block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_links_block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="footer_links" remove="true"/>
+        <move element="form.subscribe" destination="page.bottom.container" before="-"/>
+        <referenceContainer name="before.body.end" remove="true">
+            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/absolute_footer.phtml" />
+        </referenceContainer>
+    </body>
+</page>

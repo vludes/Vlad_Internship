@@ -23,7 +23,6 @@
                         max-width: 400px;
                     }
                 }
-
             }
         }
 
@@ -174,6 +173,128 @@
                 text-align: center;
 
 
+            }
+        }
+
+        .page-bottom {
+            height: 150px;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(row);
+            justify-content: space-evenly;
+            background-color: @color-Skeleton-greyish;
+
+            .subscribe-title {
+                color: @color-Skeleton-black;
+                font-weight: 600;
+                margin-top: @indent__xl;
+
+                &-after {
+                    color: @color-Skeleton-dark_grey;
+                    .lib-font-size(16);
+                }
+            }
+
+            div.block.newsletter {
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-box-align(center);
+
+                div.content {
+                    margin-top: @indent__s * 1.5;
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-box-align(center);
+
+                    form#newsletter-validate-detail.form.subscribe {
+                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-box-align(center);
+
+                        .actions {
+                            height: 55px;
+                            button {
+                                margin-left: 3px;
+                                background-color: @color-Skeleton-black;
+                                padding: 18px 35px;
+                            }
+                        }
+
+                        .field.newsletter {
+                            max-width: none;
+
+                            .control {
+                                &:before {
+                                    display: none;
+                                }
+
+                                label {
+                                    input[name="email"]#newsletter {
+                                        padding: 0 0 0 @indent__s * 1.5;
+                                        height: 50px;
+                                        margin-right: 0;
+                                        width: 300px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .page-footer {
+            background-color: @color-Skeleton-white;
+
+            .footer.content {
+                max-width: none;
+                padding: 0;
+                border-top: none;
+
+                .footer-top {
+                    .pagebuilder-column {
+                        h2 > a {
+                            .lib-font-size(20);
+                            color: @color-Skeleton-black;
+                            text-decoration: none;
+                        }
+
+                        p > a {
+                            color: @color-Skeleton-grey3;
+                        }
+                    }
+
+                }
+
+                .bottom-footer {
+                    .pagebuilder-column-group {
+                        .lib-vendor-prefix-display(flex);
+                        justify-content: space-around;
+
+                        .pagebuilder-column {
+                            &:first-of-type {
+                                width: 25% !important; //overrode pb styles
+                                .lib-vendor-prefix-flex-direction(row) !important; //overrode pb styles
+                                justify-content: space-evenly !important; //overrode pb styles
+                                text-decoration: none;
+                                a {
+                                    color: @color-Skeleton-grey3;
+                                }
+                            }
+
+                            &:last-of-type {
+                                width: 25% !important; //overrode pb styles
+                                .lib-vendor-prefix-flex-direction(row) !important; //overrode pb styles
+
+                                p {
+                                    color: @color-Skeleton-grey3;
+                                }
+
+                                .footer-image {
+                                    width: 20px;
+                                    height: 16px;
+                                    margin-left: @indent__s;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
