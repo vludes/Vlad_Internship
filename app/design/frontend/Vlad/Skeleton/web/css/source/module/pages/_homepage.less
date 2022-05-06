@@ -176,27 +176,94 @@
             }
         }
 
+        //.page-bottom {
+        //    height: 150px;
+        //    .lib-vendor-prefix-display(flex);
+        //    .lib-vendor-prefix-flex-direction(row);
+        //    justify-content: space-evenly;
+        //    background-color: @color-Skeleton-greyish;
+        //
+        //    .subscribe-title {
+        //        color: @color-Skeleton-black;
+        //        font-weight: 600;
+        //        margin-top: @indent__xl;
+        //
+        //        &-after {
+        //            color: @color-Skeleton-dark_grey;
+        //            .lib-font-size(16);
+        //        }
+        //    }
+        //
+        //    div.block.newsletter {
+        //        .lib-vendor-prefix-display(flex);
+        //        .lib-vendor-box-align(center);
+        //
+        //        div.content {
+        //            margin-top: @indent__s * 1.5;
+        //            .lib-vendor-prefix-display(flex);
+        //            .lib-vendor-box-align(center);
+        //
+        //            form#newsletter-validate-detail.form.subscribe {
+        //                .lib-vendor-prefix-display(flex);
+        //                .lib-vendor-box-align(center);
+        //
+        //                .actions {
+        //                    height: 55px;
+        //
+        //                    button {
+        //                        margin-left: 3px;
+        //                        background-color: @color-Skeleton-black;
+        //                        padding: 18px 35px;
+        //                    }
+        //                }
+        //
+        //                .field.newsletter {
+        //                    max-width: none;
+        //
+        //                    .control {
+        //                        &:before {
+        //                            display: none;
+        //                        }
+        //
+        //                        label {
+        //                            input[name="email"]#newsletter {
+        //                                padding: 0 0 0 @indent__s * 1.5;
+        //                                height: 50px;
+        //                                margin-right: 0;
+        //                                width: 300px;
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
         .page-bottom {
-            height: 150px;
+            height: 175px;
+            align-items: center;
             .lib-vendor-prefix-display(flex);
-            .lib-vendor-prefix-flex-direction(row);
+            .lib-vendor-prefix-flex-direction(column);
             justify-content: space-evenly;
             background-color: @color-Skeleton-greyish;
+
 
             .subscribe-title {
                 color: @color-Skeleton-black;
                 font-weight: 600;
-                margin-top: @indent__xl;
+                text-align: center;
+                .lib-font-size(20);
+                margin-top: @indent__s;
 
                 &-after {
-                    color: @color-Skeleton-dark_grey;
+                    margin: 0;
                     .lib-font-size(16);
                 }
             }
 
             div.block.newsletter {
-                .lib-vendor-prefix-display(flex);
-                .lib-vendor-box-align(center);
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-box-align(center);
 
                 div.content {
                     margin-top: @indent__s * 1.5;
@@ -209,27 +276,28 @@
 
                         .actions {
                             height: 55px;
+
                             button {
                                 margin-left: 3px;
                                 background-color: @color-Skeleton-black;
-                                padding: 18px 35px;
+                                padding: 18px 20px;
                             }
                         }
 
                         .field.newsletter {
-                            max-width: none;
+                            max-width: 200px;
 
                             .control {
                                 &:before {
                                     display: none;
                                 }
 
-                                label {
+                                .label {
                                     input[name="email"]#newsletter {
                                         padding: 0 0 0 @indent__s * 1.5;
-                                        height: 50px;
+                                        height: 50px !important;
                                         margin-right: 0;
-                                        width: 300px;
+                                        width: 200px;
                                     }
                                 }
                             }
@@ -255,8 +323,29 @@
                             text-decoration: none;
                         }
 
-                        p > a {
-                            color: @color-Skeleton-grey3;
+                        p {
+                            transition: all 0.5s ease-in-out;
+
+                            > a {
+                                color: @color-Skeleton-grey3;
+                                transition: all 0.5s ease-in-out;
+                            }
+
+                            &:hover {
+                                transform: translateX(20px);
+
+                                a {
+                                    color: #222222;
+                                    text-decoration: none;
+
+                                    &:before {
+                                        content: "\25CF";
+                                        display: inline-block;
+                                        position: relative;
+                                        right: 2%;
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -273,6 +362,7 @@
                                 .lib-vendor-prefix-flex-direction(row) !important; //overrode pb styles
                                 justify-content: space-evenly !important; //overrode pb styles
                                 text-decoration: none;
+
                                 a {
                                     color: @color-Skeleton-grey3;
                                 }
@@ -477,6 +567,140 @@
                 width: 20% !important; //sorry couldn't give it more priority
                 align-items: center;
                 flex-wrap: nowrap !important; // same problem, found _mobile.less, _default.less files but see no point in overriding
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .cms-home {
+        //.page-bottom {
+        //    height: 175px;
+        //    //.lib-vendor-prefix-display(flex);
+        //    .lib-vendor-prefix-flex-direction(column);
+        //    //justify-content: space-evenly;
+        //    //background-color: @color-Skeleton-greyish;
+        //
+        //    .subscribe-title {
+        //        //color: @color-Skeleton-black;
+        //        //font-weight: 600;
+        //        .lib-font-size(18);
+        //        margin-top: 0;
+        //
+        //        &-after {
+        //            margin: 0;
+        //            .lib-font-size(14);
+        //        }
+        //    }
+        //
+        //    div.block.newsletter {
+        //        //    .lib-vendor-prefix-display(flex);
+        //        //    .lib-vendor-box-align(center);
+        //
+        //        div.content {
+        //            //margin-top: @indent__s * 1.5;
+        //            //.lib-vendor-prefix-display(flex);
+        //            //.lib-vendor-box-align(center);
+        //
+        //            form#newsletter-validate-detail.form.subscribe {
+        //                //.lib-vendor-prefix-display(flex);
+        //                //.lib-vendor-box-align(center);
+        //
+        //                .actions {
+        //                    //height: 55px;
+        //
+        //                    button {
+        //                        margin-left: 3px;
+        //                        background-color: @color-Skeleton-black;
+        //                        padding: 18px 20px;
+        //                    }
+        //                }
+        //
+        //                .field.newsletter {
+        //                    max-width: 200px;
+        //
+        //                    .control {
+        //                        &:before {
+        //                            display: none;
+        //                        }
+        //
+        //                        .label {
+        //                            input[name="email"]#newsletter {
+        //                                padding: 0 0 0 @indent__s * 1.5;
+        //                                height: 50px;
+        //                                margin-right: 0;
+        //                                width: 200px;
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        .page-bottom {
+            height: 150px;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(row);
+            justify-content: space-evenly;
+            background-color: @color-Skeleton-greyish;
+
+            .subscribe-title {
+                color: @color-Skeleton-black;
+                font-weight: 600;
+                margin-top: 0;
+                text-align: left;
+
+                &-after {
+                    color: @color-Skeleton-dark_grey;
+                    .lib-font-size(16);
+                }
+            }
+
+            div.block.newsletter {
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-box-align(center);
+
+                div.content {
+                    margin-top: @indent__s * 1.5;
+                    .lib-vendor-prefix-display(flex);
+                    .lib-vendor-box-align(center);
+
+                    form#newsletter-validate-detail.form.subscribe {
+                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-box-align(center);
+
+                        .actions {
+                            height: 55px;
+
+                            button {
+                                margin-left: 3px;
+                                background-color: @color-Skeleton-black;
+                                padding: 18px 35px;
+                            }
+                        }
+
+                        .field.newsletter {
+                            max-width: none;
+
+                            .control {
+                                &:before {
+                                    display: none;
+                                }
+
+                                label {
+                                    input[name="email"]#newsletter {
+                                        padding: 0 0 0 @indent__s * 1.5;
+                                        height: 50px;
+                                        margin-right: 0;
+                                        width: 300px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
