@@ -6,7 +6,6 @@ define(["jquery"], function ($) {
         _initQty: function () {
 
             // jQuery
-
             var buttonPlus = $(this.element).find('.qty__button__increment'),
                 buttonMinus = $(this.element).find('.qty__button__decrement'),
                 elCurrentQty = $(this.element).find('input.qty');
@@ -25,9 +24,11 @@ define(["jquery"], function ($) {
             })
         }
     })
+
+    return $.vlad.SkeletonQtyControls;
 })
 
-//             JavaScript
+               // JavaScript
 
 //             var buttonPlus = document.querySelector('.qty__button__increment'),
 //                 buttonMinus = document.querySelector('.qty__button__decrement'),

@@ -2,6 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock class="Magento\Theme\Block\Html\Title" name="page.main.title" template="Magento_Theme::html/title.phtml" remove="true"/>
         <referenceContainer name="page.bottom.container">
             <container name="page.bottom" label="Before Page Footer" htmlTag="div" htmlClass="content"/>
         </referenceContainer>
