@@ -175,68 +175,66 @@
 
             }
         }
-    }
-
-
-    .page-bottom {
-        height: 175px;
-        align-items: center;
-        .lib-vendor-prefix-display(flex);
-        .lib-vendor-prefix-flex-direction(column);
-        justify-content: space-evenly;
-        background-color: @color-Skeleton-greyish;
-
-
-        .subscribe-title {
-            color: @color-Skeleton-black;
-            font-weight: 600;
-            text-align: center;
-            .lib-font-size(20);
-            margin-top: @indent__s;
-
-            &-after {
-                margin: 0;
-                .lib-font-size(16);
-            }
-        }
-
-        div.block.newsletter {
+        .page-bottom {
+            height: 175px;
+            align-items: center;
             .lib-vendor-prefix-display(flex);
-            .lib-vendor-box-align(center);
+            .lib-vendor-prefix-flex-direction(column);
+            justify-content: space-evenly;
+            background-color: @color-Skeleton-greyish;
 
-            div.content {
-                margin-top: @indent__s * 1.5;
+
+            .subscribe-title {
+                color: @color-Skeleton-black;
+                font-weight: 600;
+                text-align: center;
+                .lib-font-size(20);
+                margin-top: @indent__s;
+
+                &-after {
+                    margin: 0;
+                    .lib-font-size(16);
+                }
+            }
+
+            div.block.newsletter {
                 .lib-vendor-prefix-display(flex);
                 .lib-vendor-box-align(center);
 
-                form#newsletter-validate-detail.form.subscribe {
+                div.content {
+                    margin-top: @indent__s * 1.5;
                     .lib-vendor-prefix-display(flex);
                     .lib-vendor-box-align(center);
 
-                    .actions {
-                        height: 55px;
+                    form#newsletter-validate-detail.form.subscribe {
+                        .lib-vendor-prefix-display(flex);
+                        .lib-vendor-box-align(center);
 
-                        button {
-                            margin-left: 3px;
-                            background-color: @color-Skeleton-black;
-                            padding: 18px 20px;
-                        }
-                    }
+                        .actions {
+                            height: 55px;
 
-                    .field.newsletter {
-                        max-width: 200px;
-
-                        .control {
-                            &:before {
-                                display: none;
+                            button {
+                                margin-left: 3px;
+                                background-color: @color-Skeleton-black;
+                                padding: 18px 20px;
                             }
+                        }
 
-                            .label {
-                                input[name="email"]#newsletter {
-                                    padding: 0 0 0 @indent__s * 1.5;
-                                    height: 50px !important;
-                                    margin-right: 0;
-                                    width: 200px;
+                        .field.newsletter {
+                            max-width: 200px;
+
+                            .control {
+                                &:before {
+                                    display: none;
+                                }
+
+                                .label {
+                                    input[name="email"]#newsletter {
+                                        padding: 0 0 0 @indent__s * 1.5;
+                                        height: 50px !important;
+                                        margin-right: 0;
+                                        width: 200px;
+                                    }
                                 }
                             }
                         }
@@ -245,6 +243,9 @@
             }
         }
     }
+
+
+
 }
 
 .page-footer {
@@ -256,7 +257,12 @@
         border-top: none;
 
         .footer-top {
+            margin-top: 50px;
             .pagebuilder-column {
+                width: 18% !important; // overrode pb styles
+                &-group {
+                    justify-content: center;
+                }
                 h2 > a {
                     .lib-font-size(20);
                     color: @color-Skeleton-black;
