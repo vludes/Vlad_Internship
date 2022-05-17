@@ -2,10 +2,10 @@ var config = {
     map: {
         "*": {
             "SkeletonQtyControls": "Magento_Catalog/js/qty-controls",
-            "selectize": "Magento_Catalog/js/Selectize"
+            "nice": "Magento_Catalog/js/nice"
         }
     },
-    shim: {
-        "selectize": ["Magento_Catalog/js/selectize.min"]
+    paths: {
+        "nice-select": "Magento_Catalog/js/jquery.nice-select.min"
     }
 }

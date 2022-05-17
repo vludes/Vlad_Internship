@@ -7,7 +7,7 @@
 ?>
 <div class="toolbar-sorter sorter">
     <label class="sorter-label" for="sorter"><?= $block->escapeHtml(__('Sort By')) ?></label>
-    <select  data-mage-init='{"Selectize": {}}' id="sorter" data-role="sorter" class="sorter-options">
+    <select  data-mage-init='{"nice": {}}' id="sorter" data-role="sorter" class="sorter-options">
         <?php foreach ($block->getAvailableOrders() as $_key => $_order) :?>
             <option value="<?= $block->escapeHtmlAttr($_key) ?>"
                 <?php if ($block->isOrderCurrent($_key)) :?>
@@ -36,5 +36,3 @@
         </a>
     <?php endif; ?>
 </div>
-
-

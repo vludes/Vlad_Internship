@@ -4,8 +4,8 @@
     <media>
         <images module="Magento_Catalog">
             <image id="category_page_grid_hover" type="on_hover">
-                <width>240</width>
-                <height>300</height>
+                <width>290</width>
+                <height>360</height>
             </image>
         </images>
     </media>
