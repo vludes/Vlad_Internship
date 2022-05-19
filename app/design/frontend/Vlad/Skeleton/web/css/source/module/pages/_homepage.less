@@ -99,7 +99,7 @@
                         text-align: center !important; //overrode pb styles
                         h2 {
                             margin: 0 !important; //overrode pb styles
-                            text-align: center !important; //overrode pb styles
+                            text-align: left !important; //overrode pb styles
                         }
 
                         p {
@@ -175,6 +175,7 @@
 
             }
         }
+
         .page-bottom {
             height: 175px;
             align-items: center;
@@ -242,8 +243,11 @@
                 }
             }
         }
-    }
 
+        [data-content-type="divider"][data-pb-style="TIYF5BA"] {
+            display: none;
+        }
+    }
 
 
 }
@@ -258,11 +262,13 @@
 
         .footer-top {
             margin-top: 50px;
+
             .pagebuilder-column {
                 width: 18% !important; // overrode pb styles
                 &-group {
                     justify-content: center;
                 }
+
                 h2 > a {
                     .lib-font-size(20);
                     color: @color-Skeleton-black;

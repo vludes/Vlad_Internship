@@ -47,6 +47,8 @@ use Magento\Framework\App\Action\Action;
                                         <?= $block->escapeHtml($_item->getName()) ?>
                                     </a>
                                 </strong>
+                                <?= $block->getProductPriceHtml($_item, $type) ?>
+                                <?= $block->getProductDetailsHtml($_item) ?>
                                 <?php if ($showCart): ?>
                                     <div class="actions-primary">
                                         <?php if ($_item->isSaleable()): ?>
@@ -73,11 +75,6 @@ use Magento\Framework\App\Action\Action;
                                 <?php if ($templateType): ?>
                                     <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
                                 <?php endif; ?>
-
-                                <?= $block->getProductPriceHtml($_item, $type) ?>
-
-                                <?= $block->getProductDetailsHtml($_item) ?>
-
                                 <?php if ($showWishlist || $showCompare || $showCart): ?>
                                     <div class="product-item-inner">
                                         <div class="product-item-actions">
