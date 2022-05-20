@@ -2,37 +2,45 @@ define(['jquery',
         'uiComponent',
         'underscore',
         'Magento_Customer/js/customer-data',
-        'mage/translate'],
+        'mage/translate',
+    ],
     function ($, Component, _, customerData, $t) {
         'use strict';
 
         var mixin = {
+
+
+            defineBehaviour: function (data, event) {
+                this.initRegistries();
+
+                if (this.registries().length == 1) {
+                    event.stopPropagation();
+                    this.addProduct();
+                }
+            },
 
             getMessage: function () {
                 var message = '';
 
                 if (!this.isLoggedIn()) {
                     $('#addto-giftr.link-giftr').on('click', () => {
-                        $('.giftr-dropdown').remove();
+                        $('.giftr-list').remove();
                         location.href = this.loginUrl;
                     })
 
                 } else if (!this.hasRegistries()) {
-                    message = $t('You have no Gift Registries yet.') +
-                        ' <a href="' + this.newRegistryUrl + '">' + $t('Create Gift Registry') + '</a>';
-
-                } else if (this.isLoggedIn() && this.hasRegistries()) {
-
+                    $('#addto-giftr.link-giftr').on('click', () => {
+                        $('.giftr-list').remove();
+                        location.href = this.newRegistryUrl;
+                    });
                 }
 
                 return message;
             }
-
-
         };
 
-        return function (target) { // target == Result that Magento_Ui/.../columns returns.
-            return target.extend(mixin); // new result that all other modules receive
+        return function (target) {
+            return target.extend(mixin);
         };
     });
 
