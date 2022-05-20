@@ -8,13 +8,7 @@ define([
                 type: 'popup',
                 responsive: true,
                 title: 'Add to the following registries:',
-                buttons: [{
-                    text: $.mage.__('Ok'),
-                    class: '',
-                    click: function () {
-                        this.closeModal();
-                    }
-                }]
+                buttons: []
             };
             var popup = modal(options, $('.giftr-list'));
             $(".togiftr").click(function() {
