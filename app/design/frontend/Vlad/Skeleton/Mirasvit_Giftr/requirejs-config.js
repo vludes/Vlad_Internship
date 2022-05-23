@@ -1,12 +1,9 @@
 var config = {
     config: {
         mixins: {
-            'Mirasvit_Giftr/js/item' : {'Mirasvit_Giftr/js/item-mixin':true}
+            'Mirasvit_Giftr/js/item': {
+                'Mirasvit_Giftr/js/item-mixin': true
+            }
         }
-    },
-    map: {
-        "*": {
-            'GiftModal' : 'Mirasvit_Giftr/js/gift-modal'
-        }
-    },
+    }
 }

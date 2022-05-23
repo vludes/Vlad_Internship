@@ -67,7 +67,7 @@
         font-weight: 500;
     }
 
-    .wrapper.products-grid {
+    .wrapper.products-grid, .homepage-products-hover {
         .product-item {
             &-photo {
                 opacity: 1;
@@ -77,9 +77,13 @@
 
             .product-item-photo-hovered {
                 position: absolute;
+                top: 0;
+                left: 0;
                 visibility: visible;
                 opacity: 0.5;
                 transition: 0.7s;
+                width: 290px;
+                height: 360px;
             }
 
             .product-item-info:hover {
@@ -237,7 +241,7 @@
 
                     form {
                         margin-top: @indent__xs + 2;
-                        
+
                         button.action.tocart.primary {
                             .lib-font-size(14);
                             letter-spacing: 1px;
@@ -343,6 +347,9 @@
                                 .actions-primary {
                                     display: none;
                                 }
+                            }
+                            &-photo-hovered {
+                                display: none;
                             }
                         }
                     }
@@ -516,6 +523,13 @@
             justify-content: center;
             align-items: center;
         }
+    }
+    .widget.block {
+        display: none;
+    }
+
+    .grid.products-grid {
+        text-align: center;
     }
 }
 

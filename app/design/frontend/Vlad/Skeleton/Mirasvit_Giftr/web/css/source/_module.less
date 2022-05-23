@@ -2,34 +2,36 @@
 //
 // Common
 // ________________________
+.catalog-product-view {
+    .modal-popup._show {
+        .modal-inner-wrap {
+            width: 30%;
+            transform: translateY(200%);
 
-.modal-popup._show {
-    .modal-inner-wrap {
-        width: 30%;
-        transform: translateY(200%);
+            .registry-list {
+                align-items: center;
 
-        .registry-list {
-            align-items: center;
+                .registries {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
 
-            .registries {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-
-                .label {
-                    margin: 0 @indent__s;
+                    .label {
+                        margin: 0 @indent__s;
+                    }
                 }
-            }
 
-            #confirm-add-to-registry {
-                float: right;
-                color: @color-Skeleton-black;
-                padding-bottom: @indent__xs;
-                border-bottom: 1px solid @color-Skeleton-black;
+                #confirm-add-to-registry {
+                    float: right;
+                    color: @color-Skeleton-black;
+                    padding-bottom: @indent__xs;
+                    border-bottom: 1px solid @color-Skeleton-black;
+                }
             }
         }
     }
 }
+
 
 //
 // Clearfix For clearing floats like a boss h5bp.com/q

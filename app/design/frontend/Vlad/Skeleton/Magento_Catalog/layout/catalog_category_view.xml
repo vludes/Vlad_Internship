@@ -41,6 +41,7 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceContainer name="div.sidebar.additional" remove="true"/>
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="id" xsi:type="string">page-title-heading</argument>

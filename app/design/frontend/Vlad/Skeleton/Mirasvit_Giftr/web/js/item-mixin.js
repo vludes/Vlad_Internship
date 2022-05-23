@@ -19,23 +19,35 @@ define(['jquery',
                 }
             },
 
+            addProduct: function() {
+                if (!$('#product_addtocart_form').valid()) {
+                    return false;
+                }
+
+                $.ajax({
+                    url: this.url,
+                    method: 'POST',
+                    data: this.getData(),
+                    dataType: 'json',
+                    showLoader: true,
+                    success: function (response) {
+                        $('.giftr-list').modal('closeModal'); //modal close on add to giftr functionality
+                        if (response.status == this.login) {
+                            setLocation(response.message);
+                        }
+                    }
+                });
+            },
+
             getMessage: function () {
-                var message = '';
 
                 if (!this.isLoggedIn()) {
                     $('#addto-giftr.link-giftr').on('click', () => {
                         $('.giftr-list').remove();
                         location.href = this.loginUrl;
                     })
-
-                } else if (!this.hasRegistries()) {
-                    $('#addto-giftr.link-giftr').on('click', () => {
-                        $('.giftr-list').remove();
-                        location.href = this.newRegistryUrl;
-                    });
                 }
 
-                return message;
             }
         };
 
