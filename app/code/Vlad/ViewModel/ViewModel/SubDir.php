@@ -2,10 +2,7 @@
 
 namespace Vlad\ViewModel\ViewModel;
 
-use Magento\Cms\Api\PageRepositoryInterface;
-use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use Magento\Catalog\Model\CategoryFactory;
 use Magento\Framework\Registry;
 
 class SubDir implements ArgumentInterface

@@ -1,10 +1,9 @@
 <?php
 /** @var \Magento\Framework\View\Element\Template $block */
-
-
 /** @var Vlad\ViewModel\ViewModel\SubDir $viewModel */
  $viewModel = $block->getData('view_model')
 ?>
+
 <?php foreach ($viewModel->getAllChildCategories() as $item): ?>
        <div class="children-categories"><a href="<?=$item->getUrl()?>"><?= $item->getName() ?></a></div>
       <?php endforeach; ?>
